@@ -1,0 +1,19 @@
+# --- 요청하신 제외 파일 ---
+*.odt
+*.ppt
+*.pptx
+*.pdf
+
+# --- 시스템 및 환경설정 ---
+.DS_Store
+.env
+.vscode/
+.idea/
+
+# --- 언어 및 라이브러리 ---
+node_modules/
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/

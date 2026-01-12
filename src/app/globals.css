@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   CSS Variables & Root Styles
+   ======================================== */
+:root {
+  /* Colors */
+  --color-nebula-navy: #0a0b0d;
+  --color-quantum-blue: #4f91ff;
+  --color-cosmic-purple: #8b5cf6;
+  --color-neon-emerald: #10b981;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #4f91ff 0%, #8b5cf6 100%);
+  --gradient-dark: linear-gradient(180deg, #0a0b0d 0%, #15161a 100%);
+
+  /* Shadows */
+  --shadow-glow: 0 0 20px rgba(79, 145, 255, 0.3);
+  --shadow-glow-lg: 0 0 40px rgba(79, 145, 255, 0.4);
+
+  /* Glass effect */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 10px;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+@layer base {
+  * {
+    @apply border-slate-850;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-nebula-navy text-white antialiased;
+    background: var(--gradient-dark);
+    min-height: 100vh;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-nebula-navy-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-quantum-blue-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-quantum-blue-500;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-quantum-blue-500/30 text-white;
+  }
+
+  /* Focus */
+  :focus-visible {
+    @apply outline-none ring-2 ring-quantum-blue-500 ring-offset-2 ring-offset-nebula-navy;
+  }
+}
+
+/* ========================================
+   Component Styles
+   ======================================== */
+@layer components {
+  /* Glass Card */
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
+
+  .glass-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none;
+    background: linear-gradient(
+      135deg,
+      rgba(79, 145, 255, 0.1) 0%,
+      rgba(139, 92, 246, 0.1) 100%
+    );
+  }
+
+  .glass-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  /* Glow Button */
+  .btn-glow {
+    @apply relative overflow-hidden px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    background: var(--gradient-primary);
+  }
+
+  .btn-glow::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .btn-glow:hover {
+    @apply shadow-glow-lg transform scale-105;
+  }
+
+  .btn-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Outline Button */
+  .btn-outline {
+    @apply px-6 py-3 rounded-lg font-semibold border border-quantum-blue-500/50
+           text-quantum-blue-400 transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    @apply bg-quantum-blue-500/10 border-quantum-blue-400 shadow-glow;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Hero Title */
+  .hero-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+
+  /* Card Hover Effect */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply transform -translate-y-2 shadow-glow;
+  }
+
+  /* Mesh Gradient Background */
+  .mesh-gradient {
+    background:
+      radial-gradient(at 40% 20%, rgba(79, 145, 255, 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, rgba(79, 145, 255, 0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.1) 0px, transparent 50%);
+  }
+}
+
+/* ========================================
+   Utility Styles
+   ======================================== */
+@layer utilities {
+  /* Text Gradient */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-quantum-blue-400 to-cosmic-purple-400 bg-clip-text text-transparent;
+  }
+
+  /* Blur Background */
+  .blur-bg {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Hide Scrollbar */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Perspective for 3D */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
