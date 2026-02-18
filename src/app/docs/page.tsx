@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Book, Code, Terminal, Zap, Keyboard, Layout, Activity, Brain, Users, Globe, Bug, Radio } from 'lucide-react';
+import { ArrowLeft, Book, Terminal, Zap, Keyboard, Activity, Brain, Users, Globe, Bug, Radio } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const pageContent = {
@@ -854,18 +854,18 @@ export default function DocsPage() {
                             <div className="glass-card p-8">
                                 <h3 className="text-xl font-semibold mb-4 text-white">WebSocket Client Example</h3>
                                 <div className="bg-black/50 rounded-lg p-6 font-mono text-sm space-y-1 overflow-x-auto">
-                                    <div className="text-slate-500">// Connect to WebSocket</div>
+                                    <div className="text-slate-500">{/* Connect to WebSocket */}</div>
                                     <div className="text-violet-300">const ws = new WebSocket(</div>
                                     <div className="text-yellow-400 pl-4">&apos;ws://localhost:8003/api/v1/ws/chat/conv_123&apos;</div>
                                     <div className="text-violet-300">);</div>
-                                    <div className="text-slate-500 mt-2">// Handle streaming tokens</div>
+                                    <div className="text-slate-500 mt-2">{/* Handle streaming tokens */}</div>
                                     <div className="text-violet-300">ws.onmessage = (event) =&gt; &#123;</div>
                                     <div className="text-slate-300 pl-4">const data = JSON.parse(event.data);</div>
                                     <div className="text-slate-300 pl-4">if (data.type === &apos;stream_token&apos;) &#123;</div>
                                     <div className="text-neon-emerald-400 pl-8">process.stdout.write(data.content);</div>
                                     <div className="text-slate-300 pl-4">&#125;</div>
                                     <div className="text-violet-300">&#125;;</div>
-                                    <div className="text-slate-500 mt-2">// Send message</div>
+                                    <div className="text-slate-500 mt-2">{/* Send message */}</div>
                                     <div className="text-violet-300">ws.send(JSON.stringify(&#123;</div>
                                     <div className="text-slate-300 pl-4">type: &apos;message&apos;,</div>
                                     <div className="text-slate-300 pl-4">content: &apos;Hello AI&apos;,</div>

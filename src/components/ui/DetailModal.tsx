@@ -141,9 +141,11 @@ function parseMarkdownContent(content: string): React.ReactNode[] {
 // Parse inline markdown (bold, italic, code)
 function parseInlineMarkdown(text: string): React.ReactNode {
     // Process inline code first
+    /* eslint-disable @typescript-eslint/no-unused-vars, prefer-const */
     const parts: React.ReactNode[] = [];
     let remaining = text;
     let key = 0;
+    /* eslint-enable @typescript-eslint/no-unused-vars, prefer-const */
 
     // Handle inline code `code`
     const codeRegex = /`([^`]+)`/g;

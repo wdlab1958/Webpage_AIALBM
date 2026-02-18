@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useMemo, useEffect, useState } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 // Particle system component
@@ -55,7 +55,7 @@ function Particles({ count = 1500 }: { count?: number }) {
     }, []);
 
     // Animation loop
-    useFrame((state, delta) => {
+    useFrame(() => {
         if (!meshRef.current) return;
 
         // Base rotation

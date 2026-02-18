@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Store, Users, Handshake, BookOpen, Activity } from 'lucide-react';
+import { ArrowLeft, Store, Handshake, BookOpen, Activity } from 'lucide-react';
 import { useState } from 'react';
 import DetailModal from '@/components/ui/DetailModal';
 import { useLanguage } from '@/context/LanguageContext';
