@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components/layout/GlobalBackground.tsx -> @/components/three/ParticleBackground\":{\"id\":\"components/layout/GlobalBackground.tsx -> @/components/three/ParticleBackground\",\"files\":[\"static/chunks/_app-pages-browser_src_components_three_ParticleBackground_tsx.js\"]}}"

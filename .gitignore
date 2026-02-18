@@ -17,3 +17,12 @@ __pycache__/
 venv/
 .venv/
 env/
+*.pptx
+
+# --- Next.js 빌드 ---
+.next/
+out/
+*.tsbuildinfo
+
+# --- 로그 ---
+*.log

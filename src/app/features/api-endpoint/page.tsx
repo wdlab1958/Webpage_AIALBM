@@ -26,18 +26,23 @@ AIALBM exposes its entire capability set through a strict Level 2 REST Maturity 
         },
         {
             icon: <Database className="w-6 h-6 text-neon-emerald" />,
-            title: "84+ Endpoints",
-            description: "Comprehensive coverage. From simple message sending to complex fine-tuning jobs, every capability of the platform is accessible via API.",
+            title: "172+ Endpoints",
+            description: "Comprehensive coverage across 14 categories. From simple message sending to complex fine-tuning jobs, every capability of the platform is accessible via API with 100% test pass rate.",
             detailedContent: `## Comprehensive Control Plane
 
-We provide over 84 documented endpoints covering the full spectrum of platform functionality.
+We provide over 172 documented endpoints covering the full spectrum of platform functionality across 14 categories.
 
-### Key API Categories:
-- **Core Chat**: \`/v1/chat/completions\` (OpenAI compatible), \`/v1/streaming\`
-- **Agent Orchestration**: \`/v1/agents/config\`, \`/v1/agents/deploy\`
-- **Memory Management**: \`/v1/memory/query\`, \`/v1/memory/consolidate\`, \`/v1/memory/upload\`
-- **Fine-Tuning**: \`/v1/jobs/finetune\`, \`/v1/models\`, \`/v1/datasets\`
-- **System Internals**: \`/v1/system/health\`, \`/v1/system/metrics\``
+### Key API Categories (172 endpoints):
+- **Authentication**: \`/api/v1/auth/login\`, \`/api/v1/auth/register\` (12 endpoints)
+- **Agents**: \`/api/v1/agents/\`, \`/api/v1/agents/select\` (17 endpoints)
+- **Conversations & Messages**: \`/api/v1/conversations/\`, \`/api/v1/messages/\` (12 endpoints)
+- **Memories**: \`/api/v1/memories/search\`, \`/api/v1/memories/consolidate\` (12 endpoints)
+- **Autolearning**: \`/api/v1/autolearning/start\`, \`/api/v1/autolearning/deploy\` (17 endpoints)
+- **Vibe Coding**: \`/api/v1/vibe_coding/generate\`, \`/api/v1/vibe_coding/learn\` (30 endpoints)
+- **Federated Learning**: \`/api/v1/federated/rounds/start\` (20 endpoints)
+- **Clawdbot**: \`/api/v1/clawdbot/\`, \`/api/v1/webhook/clawdbot\` (10 endpoints)
+- **RAG Pipeline**: \`/api/v1/rag/search\`, \`/api/v1/rag/generate\` (6 endpoints)
+- **Multimodal**: \`/api/v1/multimodal/upload\` (10 endpoints)`
         },
         {
             icon: <Lock className="w-6 h-6 text-quantum-blue" />,
@@ -86,18 +91,23 @@ AIALBM은 엄격한 Level 2 REST 성숙도 모델 API를 통해 전체 기능 �
         },
         {
             icon: <Database className="w-6 h-6 text-neon-emerald" />,
-            title: "84개 이상의 엔드포인트",
-            description: "포괄적인 범위. 간단한 메시지 전송부터 복잡한 파인 튜닝 작업까지, 플랫폼의 모든 기능이 API를 통해 액세스 가능합니다.",
+            title: "172개 이상의 엔드포인트",
+            description: "14개 카테고리에 걸친 포괄적인 범위. 간단한 메시지 전송부터 복잡한 파인 튜닝 작업까지, 플랫폼의 모든 기능이 100% 테스트 통과율의 API를 통해 액세스 가능합니다.",
             detailedContent: `## 종합적인 컨트롤 플레인
 
-플랫폼 기능의 전체 스펙트럼을 다루는 84개 이상의 문서화된 엔드포인트를 제공합니다.
+14개 카테고리에 걸쳐 플랫폼 기능의 전체 스펙트럼을 다루는 172개 이상의 문서화된 엔드포인트를 제공합니다.
 
-### 주요 API 카테고리:
-- **핵심 채팅**: \`/v1/chat/completions\` (OpenAI 호환), \`/v1/streaming\`
-- **에이전트 오케스트레이션**: \`/v1/agents/config\`, \`/v1/agents/deploy\`
-- **메모리 관리**: \`/v1/memory/query\`, \`/v1/memory/consolidate\`, \`/v1/memory/upload\`
-- **파인 튜닝**: \`/v1/jobs/finetune\`, \`/v1/models\`, \`/v1/datasets\`
-- **시스템 내부**: \`/v1/system/health\`, \`/v1/system/metrics\``
+### 주요 API 카테고리 (172개 엔드포인트):
+- **인증**: \`/api/v1/auth/login\`, \`/api/v1/auth/register\` (12개)
+- **에이전트**: \`/api/v1/agents/\`, \`/api/v1/agents/select\` (17개)
+- **대화 & 메시지**: \`/api/v1/conversations/\`, \`/api/v1/messages/\` (12개)
+- **메모리**: \`/api/v1/memories/search\`, \`/api/v1/memories/consolidate\` (12개)
+- **자동학습**: \`/api/v1/autolearning/start\`, \`/api/v1/autolearning/deploy\` (17개)
+- **바이브 코딩**: \`/api/v1/vibe_coding/generate\`, \`/api/v1/vibe_coding/learn\` (30개)
+- **연합 학습**: \`/api/v1/federated/rounds/start\` (20개)
+- **Clawdbot**: \`/api/v1/clawdbot/\`, \`/api/v1/webhook/clawdbot\` (10개)
+- **RAG 파이프라인**: \`/api/v1/rag/search\`, \`/api/v1/rag/generate\` (6개)
+- **멀티모달**: \`/api/v1/multimodal/upload\` (10개)`
         },
         {
             icon: <Lock className="w-6 h-6 text-quantum-blue" />,

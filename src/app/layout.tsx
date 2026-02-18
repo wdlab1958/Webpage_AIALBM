@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'AIALBM - Autonomous AI Learning Based Model',
-  description: 'Personalized AI Agent Platform with Self-Programming and Continuous Learning capabilities.',
+  title: 'AIALBM v4.1.0 — AI Advances by Learning Brain Memory',
+  description: 'Personalized AI Agent Platform with Multi-Agent Orchestration, 3-Layer Memory, Vibe Coding, Federated Learning, and Autonomous Evolution. 172+ API endpoints, 100% test pass rate.',
 };
 
 export default function RootLayout({
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body className="min-h-screen bg-nebula-navy font-sans antialiased">
+    <html lang="en" className={`${inter.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen bg-nebula-navy font-sans antialiased" suppressHydrationWarning>
         <Providers>
           <GlobalBackground />
           <main className="relative z-10 flex-1">

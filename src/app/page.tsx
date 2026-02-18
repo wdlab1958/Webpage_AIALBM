@@ -7,7 +7,8 @@ import {
   Cpu, Brain, Code, Shield, Database, ArrowRight,
   MessageSquare, Settings, History, Layers, Zap, Bot, Share2, Globe,
   Monitor, Activity, Cog, LayoutDashboard, ExternalLink, Play,
-  Smartphone, Building2, BarChart3, Network
+  Smartphone, Building2, BarChart3, Network,
+  MessageCircle, Search, Sparkles, LightbulbIcon, RefreshCw, Store
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import DetailModal from '@/components/ui/DetailModal';
@@ -136,7 +137,7 @@ export default function Home() {
               <span>{language === 'en' ? '한국어' : 'English'}</span>
             </button>
             <a
-              href="http://localhost:8000/"
+              href="http://localhost:8003/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-glow text-sm px-4 py-2"
@@ -358,6 +359,62 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+
+            {/* Category 6: Integration & Data Pipeline */}
+            <div>
+              <h3 className="text-2xl font-bold mb-8 pl-4 border-l-4 border-violet-500">{t('category.integration')}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Link href="/features/clawdbot" className="block h-full cursor-pointer">
+                  <FeatureCard
+                    icon={<MessageCircle className="w-6 h-6 text-violet-500" />}
+                    title={t('feature.clawdbot.title')}
+                    description={t('feature.clawdbot.desc')}
+                  />
+                </Link>
+                <Link href="/features/rag-pipeline" className="block h-full cursor-pointer">
+                  <FeatureCard
+                    icon={<Search className="w-6 h-6 text-violet-500" />}
+                    title={t('feature.rag.title')}
+                    description={t('feature.rag.desc')}
+                  />
+                </Link>
+              </div>
+            </div>
+
+            {/* Category 7: Phase 4 - Innovation */}
+            <div>
+              <h3 className="text-2xl font-bold mb-8 pl-4 border-l-4 border-amber-500">{t('category.innovation')}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <Link href="/features/autonomous-evolution" className="block h-full cursor-pointer">
+                  <FeatureCard
+                    icon={<Sparkles className="w-6 h-6 text-amber-500" />}
+                    title={t('feature.autonomousEvolution.title')}
+                    description={t('feature.autonomousEvolution.desc')}
+                  />
+                </Link>
+                <Link href="/features/advanced-reasoning" className="block h-full cursor-pointer">
+                  <FeatureCard
+                    icon={<LightbulbIcon className="w-6 h-6 text-amber-500" />}
+                    title={t('feature.advancedReasoning.title')}
+                    description={t('feature.advancedReasoning.desc')}
+                  />
+                </Link>
+                <Link href="/features/self-improving" className="block h-full cursor-pointer">
+                  <FeatureCard
+                    icon={<RefreshCw className="w-6 h-6 text-amber-500" />}
+                    title={t('feature.selfImproving.title')}
+                    description={t('feature.selfImproving.desc')}
+                  />
+                </Link>
+                <Link href="/features/ai-ecosystem" className="block h-full cursor-pointer">
+                  <FeatureCard
+                    icon={<Store className="w-6 h-6 text-amber-500" />}
+                    title={t('feature.aiEcosystem.title')}
+                    description={t('feature.aiEcosystem.desc')}
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -419,7 +476,7 @@ export default function Home() {
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="http://localhost:8000/"
+                  href="http://localhost:8003/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-full font-bold text-lg hover:from-orange-600 hover:to-amber-600 transition-all flex items-center gap-2 shadow-lg shadow-orange-500/25"
@@ -428,7 +485,7 @@ export default function Home() {
                   <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
-                  href="http://localhost:8000/"
+                  href="http://localhost:8003/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-white/10 text-white rounded-full font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm border border-white/20 flex items-center gap-2"
@@ -481,11 +538,11 @@ export default function Home() {
                       <div className="text-xs text-slate-500">{t('agent.stats.agents')}</div>
                     </div>
                     <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                      <div className="text-2xl font-bold text-amber-400">84+</div>
+                      <div className="text-2xl font-bold text-amber-400">172+</div>
                       <div className="text-xs text-slate-500">{t('agent.stats.endpoints')}</div>
                     </div>
                     <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                      <div className="text-2xl font-bold text-yellow-400">99.9%</div>
+                      <div className="text-2xl font-bold text-yellow-400">99.95%</div>
                       <div className="text-xs text-slate-500">{t('agent.stats.uptime')}</div>
                     </div>
                   </div>
@@ -519,7 +576,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="absolute -bottom-4 -right-4 px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full text-white text-sm font-bold shadow-lg shadow-orange-500/30"
               >
-                localhost:8000
+                localhost:8003
               </motion.div>
             </motion.div>
           </div>
@@ -735,18 +792,22 @@ export default function Home() {
             <p className="text-slate-400 max-w-3xl mx-auto mb-10">
               {t('roadmap.description')}
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <div className="px-6 py-3 rounded-lg bg-white/5 border border-white/10">
-                <div className="text-2xl font-bold text-quantum-blue">3+</div>
+                <div className="text-2xl font-bold text-quantum-blue">4/4</div>
                 <div className="text-sm text-slate-500">{t('roadmap.phases')}</div>
               </div>
               <div className="px-6 py-3 rounded-lg bg-white/5 border border-white/10">
-                <div className="text-2xl font-bold text-cosmic-purple">70%</div>
-                <div className="text-sm text-slate-500">{t('roadmap.efficiency')}</div>
+                <div className="text-2xl font-bold text-cosmic-purple">172+</div>
+                <div className="text-sm text-slate-500">{t('roadmap.endpoints')}</div>
               </div>
               <div className="px-6 py-3 rounded-lg bg-white/5 border border-white/10">
-                <div className="text-2xl font-bold text-neon-emerald">100%</div>
-                <div className="text-sm text-slate-500">{t('roadmap.opensource')}</div>
+                <div className="text-2xl font-bold text-neon-emerald">240K+</div>
+                <div className="text-sm text-slate-500">{t('roadmap.codeLines')}</div>
+              </div>
+              <div className="px-6 py-3 rounded-lg bg-white/5 border border-white/10">
+                <div className="text-2xl font-bold text-amber-400">100%</div>
+                <div className="text-sm text-slate-500">{t('roadmap.testPass')}</div>
               </div>
             </div>
           </div>
