@@ -2,7 +2,7 @@
 ## AI Advances by Learning Brain Memory — Interactive Showcase
 ## 학습 메모리를 통한 인공지능 고도화 플랫폼 — 인터랙티브 소개 웹사이트
 
-**Update: Feb. 18, 2026 / Editor: Brian Lee - A3 Security AITF Working Group**
+**Update: Feb. 18, 2026 / Editor: Brian Lee - WDLAB@2023-2026 Working Group**
 **Version:** 4.1.0 (Production Release)
 **Parent Project:** [AIALBM Platform](https://github.com/wdlab1958/AIALBM)
 
@@ -247,4 +247,4 @@ npm start -- -p 3004
 
 **AIALBM Promotion Website — Next.js 기반 AI 플랫폼 인터랙티브 소개 페이지**
 
-*Last updated: February 18, 2026 by Brian Lee - A3 Security AITF Working Group*
+*Last updated: February 18, 2026 by Brian Lee - WDLAB@2023-2026 Working Group*
